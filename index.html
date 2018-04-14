@@ -1,0 +1,31 @@
+---
+title: Blog - sizeoverload
+layout: allposts
+---
+<div class="flexContainer">
+
+    {% for post in site.categories['blog'] reversed %}
+    <div class="blogItem">
+        <span class="title-style">{{post.video_title}}</span>
+        <div class="yt-item">
+            <div class="yt-item-thumb">
+                <img src="https://www.iconsdb.com/icons/preview/white/bird-2-xxl.png">
+            </div>
+            <div class="yt-item-table">
+                <div class="yt-table-row">
+                    <div class="yt-table-cell"><i>description:</i> x </div>
+                    <div class="yt-table-cell"><i>date uploaded:</i> {{post.date | date_to_long_string}}</div>
+                </div>
+                <div class="yt-table-row">
+                    <div class="yt-table-cell"><i>creator:</i> <span class="rainbow-fill">blowback's is a bitch!</span></div>
+                    <div class="yt-table-cell"><i>length:</i> {{post.video_length}}</div>
+                </div>
+            </div>
+        </div>
+            {% if post.custom_sub == 'ps-scripts' %}
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            {%endif%}
+
+    </div>
+    {% endfor %}
+</div>

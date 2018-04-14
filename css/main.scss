@@ -1,0 +1,53 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$base-font-family: 'Source Sans Pro', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$header-font: 'Roboto Slab', serif;
+$title-font-family: 'Gloria Hallelujah';
+$title-secondary-font-family: 'Squada One', sans-serif;
+// $title-secondary-font-family: 'Acme', sans-serif;
+$title-font-size: 50px;
+
+
+//SAM
+$bones_seeds_apples_books: url("/img/bones_seeds_apples_books.png");
+$bg_lines_tone: #e3e0df;
+
+$spacing-unit:     30px;
+
+$text-color:       #2C3539;
+$background-color: #eff3f3;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// set yt-blog-item variable 1, 2, 3, and 4
+$yt-blog-item: 1;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "samstyle",
+        "ytstyle"
+;

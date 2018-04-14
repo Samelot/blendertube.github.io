@@ -1,0 +1,74 @@
+/* Flex Containers */
+
+.flexContainer {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;  /* OLD - Firefox 19- */
+    display: -ms-flexbox;  /* Chrome */
+    display: -webkit-flex; /* IE 10 */
+    display: flex; /* brings up issues with flexitem having greater width of flexbox, and spaning outside of it. */
+
+    /* try nowrap or wrap */
+    -webkit-flex-flow: row wrap;
+    flex-flow:row wrap;
+
+    justify-content:center;
+    width:100%;
+    max-width:884px;
+
+}
+
+/* For bouncing main content off of header !!! all in one place as to keep things consistent */
+
+.artRow {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    margin-bottom: 20px;
+    /*padding:0px 8px 0px 8px;*/
+    /*margin:18px;*/
+
+}
+
+/* Flex Items */
+
+.blogItem {
+    overflow:hidden;
+    width:100%;
+    margin:4px 4px 24px 4px;
+    border-bottom:0px solid rgba(180, 180, 180, .7);
+    /*padding: 10px;*/
+    /* background-color: #E0E5E5; */
+    outline: rgb(16, 16, 16) none 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px 0px;
+    box-sizing: border-box;
+    padding: 13px 0px 13px 0px;
+    border: 0px none rgb(16, 16, 16);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.picsItem {
+    /*
+    border:1px solid rgba(180, 180, 180, .2);
+    margin:0px 4px 0px 4px;
+    */
+    /* SLOWER PERFORMANCE? */
+    /*border-radius: 3px;*/
+}
+
+
+@media all and (max-width: 483px) {
+    .flexContainer {
+        -webkit-flex-flow: column nowrap;
+        justify-content:center;
+    }
+
+    .picsItem, .blogItem {
+      align-self:center;
+      width:100%;
+    }
+}
