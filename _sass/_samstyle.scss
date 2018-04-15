@@ -21,52 +21,113 @@ body {
 
 /* style, links.. in order
 /*****************************************************************************/
- .header {
-    /* Instead of height... maybe try using top bottom padding to pad between top */
-    /* check out http://blog.codinghorror.com/ */
-    /*
-    margin-left: auto;
-    margin-right: auto;
-    max-width:425px;
-    */
+.header {
+    margin:10px 0px 10px 0px;
     min-width:220px;
     max-width:884px;
-    height:131px;
+    border-radius: 5px 5px 5px 5px;
+
+    background-color: $smokey-topaz-platform;
+    border: 2px outset $smokey-topaz-stroke;
+    // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logoText {
+    margin: 0px auto 0px auto;
+    width:240px;
+    line-height: 80px;
+    // background-color: $shadow-blue-platform;
+    // border: 2px outset $shadow-blue;
+    > a {
+        -webkit-text-fill-color: $smokey-topaz;
+        -webkit-text-stroke-width: .1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, .4);
+        font-family: $title-secondary-font-family;
+        font-weight: bolder;
+        font-size: 80px;
+        // cursor: default;
+        &:hover {
+    		text-decoration: none;
+        }
+        &:hover,
+        &:focus {
+            // color: $colHighlight;
+        }
+
+        > span {
+            color: #000000;
+            -webkit-text-fill-color: #000000;
+            -webkit-text-stroke-width: 0px;
+            position:absolute;
+            margin-top:34px;
+            margin-left:-80px;
+            font-family: $title-font-family;
+            font-weight: 400;
+            font-size: 38px;
+            opacity:.8;
+            text-shadow: 1px 3px 0px rgba(0, 0, 0, .4);
+            z-index: 1;
+        }
+    }
+}
+
+// nav text organization style 1
+.videosText {
+	margin: 0px auto 2px auto;
+	width: 220px;
+
+    // make dynamic variable
+    // background-color: $human-skin + (alpha);
+	// background-color: $human-skin;
+
+    background-color: $shadow-blue-platform;
+    border: 2px outset $shadow-blue;
+
     text-align:center;
-    /*border:1px solid black;*/
-    /* CONSISTENCY: for spacing between elements, primarilly use margin-bottom */
-    /* github markdown styings do not mix margin-top and margin-bottom... */
-    /* choose one and stick to it */
+    font-size: 20px;
+    > a {
+    	font-family: $font_family_consolas;
+    	color: #000000;
+        text-decoration: none;
+    	&:hover {
+    		// display: inline-block;
+    		// text-align: center;
+    		// width: 60px;
+    		font-family: $font_family_consolas;
+    		color: #000000;
+    		text-decoration: underline;
+    	}
+    }
 }
-.headerLinks {
-    margin-top:44px;
-}
-.logoLink {
+
+// nav text organization style 2
+.aboutText {
+	margin: 0px auto 16px auto;
     display:block;
-    min-width:220px;
-    /*max-width:500px;*/
-    height:70px;
-    background-image: url(../images/sizeoverload_text8.png);
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.pageLink {
-    text-decoration: none;
-}
-.pageLink, .pageLink:hover {
-    display:inline-block;
-    text-align:center;
-    width:60px;
-    margin:0px 1px 0px 1px;
-    padding:0px 6px 9px 6px;
-    font-family:"Consolas", "Monaco", "Courier New", "Courier", monospace;
-    color: #000;
-    font-size:20px;
-}
-.pageLink:hover {
-    /*border-bottom: 2px dotted #f5a2c6;*/
-    text-decoration:underline;
-    /*background: #AED180;*/
+	width: 220px;
+
+    // make dynamic variable
+    // background-color: $human-skin + (alpha);
+	// background-color: $human-skin;
+
+    background-color: $shadow-blue-platform;
+    border: 2px outset $shadow-blue;
+
+    text-align: center;
+    font-size: 20px;
+	text-decoration: none;
+	font-family: $font_family_consolas;
+	font-size: 20px;
+	color: #000000;
+	&:hover {
+		// display: inline-block;
+		// text-align: center;
+		// width: 60px;
+		font-family: $font_family_consolas;
+		color: #000000;
+		text-decoration: underline;
+	}
 }
 
 .rainbow-fill {
@@ -158,25 +219,25 @@ a:hover {
 }
 /*
 .blogNav a[href] {
-    text-decoration: none;
-    border-bottom: 1px dotted black;
-    padding:6px;
-    margin:8px auto 8px auto;
-    color: #000;
-    font-size: 98%;
+text-decoration: none;
+border-bottom: 1px dotted black;
+padding:6px;
+margin:8px auto 8px auto;
+color: #000;
+font-size: 98%;
 }
 
 .blogNav a[href]:hover {
 
-    font-size: 100%;
-    font-weight:bold;
+font-size: 100%;
+font-weight:bold;
 }
 
 .noLink {
-    color: black;
+color: black;
 }
 */
- .bulletbobbit {
+.bulletbobbit {
     display:block;
     float:right;
     /*background:rgba(210, 0, 100, .1);*/
@@ -198,7 +259,7 @@ img {
 .heytellTable {
     width:50%;
     word-break: break-word;
-/*    margin-left:auto;
+    /*    margin-left:auto;
     margin-right:auto;*/
     margin-bottom:15px;
 }
