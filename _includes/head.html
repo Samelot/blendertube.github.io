@@ -10,9 +10,8 @@
     <meta name="keywords" content="art, graphics, software, development, mind, mods, utilities, creativity, projects, technology">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- , initial-scale=1 maximum-scale=1 -->
-    <link rel="stylesheet" href="/css/flex.css" type="text/css">
-    <link rel="stylesheet" href="/css/md-ghStackHybrid.css" type="text/css">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="/css/flex.css" type="text/css"> -->
+    <link rel="stylesheet" href={{ "/css/main.css" | prepend: site.baseurl }}>
     <!-- Custom fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Slabo+27px|Bungee|Squada+One|Gloria+Hallelujah|Lato|Lobster|Aref+Ruqaa|Montserrat|Patua+One|Ropa+Sans|Roboto+Slab|Acme|Rubik|Open+Sans|Oswald|Oxygen|Merriweather|Raleway|Roboto" rel="stylesheet">
 
@@ -35,7 +34,7 @@
     </script>
     <!-- This jquery library should be local ! -->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <!-- <script type="text/javascript" src="/js/jquery.animateSprite.min.js"></script> -->
+    <script src={{ "/javascript/responsive-sprite.js" | prepend: site.baseurl }} type="text/javascript"></script>
 
 </head>
 
@@ -43,13 +42,13 @@
 
     <div class="wrapper">
         <div class="header">
-            <div class="logoText">
+            <div class="logo-blendertube">
                 <a href="/">blender<span>tube</span></a>
             </div>
             <!-- nav text organization style 1 -->
-            <div class="videosText">
+            <div class="nav-videos">
                 <a href="/">videos</a>
             </div>
             <!-- nav text organization style 2 -->
-            <a class="aboutText" href="/pics/">about</a>
+            <a class="nav-about" href="/pics/">about</a>
         </div>

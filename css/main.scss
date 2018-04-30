@@ -3,6 +3,10 @@
 ---
 @charset "utf-8";
 
+$blender-orange1: #e4770c;
+$blender-orange2: #ee9131;
+$blender-orange3: #eba45f;
+
 $human-skin: rgba(233, 202, 156, 1);
 $mango-tango: rgba(255, 140, 66, 1);
 $coral-red: rgba(255, 60, 56, 1);
@@ -60,6 +64,4 @@ $yt-blog-item: 1;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "samstyle",
-        "ytstyle"
-;
+        "samstyle";
