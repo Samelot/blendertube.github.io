@@ -1,5 +1,4 @@
 function VideoThumbnail() {
-
 	this.thumbnailClassName = 'video-thumbnail';
 	this.thumbnailDivList = document.getElementsByClassName(this.thumbnailClassName);
 	this.maxThumbnailNr = 0;
@@ -91,7 +90,6 @@ VideoThumbnail.prototype.setDivBackgroundImage = function (divElem) {
 	var defaultThumbnailNr = divElem.dataset.hasOwnProperty(self.defaultThumbNrName) ? divElem.dataset.defaultimgnr : 1;
 	var defaultBackgroundImg = divElem.dataset.hasOwnProperty('img') ? divElem.dataset.img : 1;
 	divElem.style.backgroundImage = 'url(' + defaultBackgroundImg + ')';
-
     var self = this;
     var thumbnailMapWidth = 0;
 	this.getThumbnailMapWidthByDivElement(divElem, function(imageWidth) {
@@ -102,6 +100,7 @@ VideoThumbnail.prototype.setDivBackgroundImage = function (divElem) {
 
 };
 
+// MAIN
 VideoThumbnail.prototype.displayThumbs = function () {
 	for (var i = 0; i < this.thumbnailDivList.length; ++i) {
 		var defaultThumbnailNr = this.thumbnailDivList[i].dataset.hasOwnProperty(this.defaultThumbNrName) ? this.thumbnailDivList[i].dataset.defaultimgnr : 1;
@@ -112,7 +111,15 @@ VideoThumbnail.prototype.displayThumbs = function () {
         var self = this;
         var divItem = this.thumbnailDivList[i];
         this.getThumbnailMapWidthByDivElement(divItem, defaultThumbnailNr, function(imageWidth, divElem, defaultThumbNr) {
-            thumbnailMapWidth = imageWidth;
+			console.log("gobochucki: " + divElem);
+
+			// SAMS RATIO
+			var newHeight = 240 * (180 / (imageWidth/100));
+			divElem.style.border = '1px solid red';
+			divElem.style.height = newHeight + 'px';
+			divElem.style.width = '240px';
+
+			thumbnailMapWidth = imageWidth;
             divItem = divElem;
             defaultThumbnailNr = defaultThumbNr;
             var xPosition = self.getXPositionByDefaultThumbnailNr(defaultThumbnailNr);
