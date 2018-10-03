@@ -1,8 +1,8 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
+// scss variables in here for now... as long as these are in a scss file that is called early by @imports, scss should compile properly
 $blender-orange1: #e4770c;
 $blender-orange2: #ee9131;
 $blender-orange3: #eba45f;
@@ -18,22 +18,7 @@ $smokey-topaz: rgba(162, 62, 72, 1);
 $shadow-blue-platform: rgba(108, 142, 173, .8);
 $shadow-blue: rgba(108, 142, 173, 1);
 
-$font_family_consolas: "Consolas", "Monaco", "Courier New", "Courier", monospace;
-$base-font-family: 'Source Sans Pro', sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$header-font: 'Roboto Slab', serif;
-$title-font-family: 'Gloria Hallelujah';
-$title-secondary-font-family: 'Squada One', sans-serif;
-// $title-secondary-font-family: 'Acme', sans-serif;
-$title-font-size: 50px;
-
-
 //SAM
-$bones_seeds_apples_books: url("/img/bones_seeds_apples_books.png");
 $bg_lines_tone: #e3e0df;
 
 $spacing-unit:     30px;
@@ -55,6 +40,8 @@ $on-laptop:        800px;
 // set yt-blog-item variable 1, 2, 3, and 4
 $yt-blog-item: 1;
 
+@charset "utf-8";
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -63,5 +50,8 @@ $yt-blog-item: 1;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "fonts",
+        "creators",
         "base",
-        "samstyle";
+        "samstyle",
+        "rainbowstyle";

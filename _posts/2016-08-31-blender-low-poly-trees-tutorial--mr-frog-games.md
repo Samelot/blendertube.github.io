@@ -2,7 +2,7 @@
 layout: blogpost
 category: blog
 video_topic: x
-video_title: BLENDER - LOW POLY TREES (Tutorial) | Mr. Frog Games
+video_title: "BLENDER - LOW POLY TREES (Tutorial) | Mr. Frog Games"
 video_id: blender-low-poly-trees-tutorial--mr-frog-games
 video_date: 2016-08-31
 video_creator: CGFrog - Mr. Frog Games

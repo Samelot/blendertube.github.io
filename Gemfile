@@ -9,6 +9,7 @@ group :jekyll_plugins do
     gem "jekyll-paginate"
     gem "jekyll-gist"
     gem "jekyll-migrate-permalink"
+    gem "jekyll-tagging"
 	gem "pygments.rb", "~> 1.2", ">= 1.2.1"
     gem "rake"
     gem "html-proofer"

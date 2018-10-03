@@ -115,7 +115,7 @@ VideoThumbnail.prototype.displayThumbs = function () {
 
 			// SAMS RATIO
 			var newHeight = 240 * (180 / (imageWidth/100));
-			divElem.style.border = '1px solid red';
+			// divElem.style.border = '1px solid red';
 			divElem.style.height = newHeight + 'px';
 			divElem.style.width = '240px';
 

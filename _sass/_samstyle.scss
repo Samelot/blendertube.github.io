@@ -3,10 +3,16 @@ body {
     margin-right:0px;
     padding-left:0px;
     padding-right:0px;
-    /*font: 13.34px Verdana, helvetica, arial, clean, sans-serif;*/
-    /*font-family: "Consolas", "Monaco", "Courier New", "Courier", monospace;*/
-    font-size:100%
 }
+
+ul {
+    list-style-type: none;
+    padding: 0px 20px;
+    li {
+        padding: 1px;
+    }
+}
+
 .wrapper {
     min-width:220px;
     max-width: 884px;
@@ -68,8 +74,8 @@ body {
         }
     }
 }
-// nav text organization style 1
-.nav-videos {
+
+.nav-link {
     margin: 0px auto 2px auto;
     width: 220px;
 
@@ -94,35 +100,6 @@ body {
             color: #000000;
             text-decoration: underline;
         }
-    }
-}
-
-// nav text organization style 2
-.nav-about {
-    margin: 0px auto 16px auto;
-    display:block;
-    width: 220px;
-
-    // make dynamic variable
-    // background-color: $human-skin + (alpha);
-    // background-color: $human-skin;
-
-    background-color: $shadow-blue-platform;
-    border: 2px outset $shadow-blue;
-
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-    font-family: $font_family_consolas;
-    font-size: 20px;
-    color: #000000;
-    &:hover {
-        // display: inline-block;
-        // text-align: center;
-        // width: 60px;
-        font-family: $font_family_consolas;
-        color: #000000;
-        text-decoration: underline;
     }
 }
 
@@ -159,26 +136,6 @@ body {
     border-bottom:0px solid rgba(180, 180, 180, .7);
     /*padding: 10px;*/
     /* background-color: #E0E5E5; */
-    a {
-        display:block;
-        text-align: left;
-        /*padding:4px;*/
-        margin:8px auto 8px auto;
-        border-bottom: 1px dotted black;
-        /*background: rgba(102,128,153,.02);*/
-        /*border-bottom:1px solid rgba(180, 180, 180, .7);*/
-        /*
-        text-decoration: none;
-        color: #000;
-        */
-        /*font-size: 98%;*/
-    }
-    a:hover {
-        /*background: rgba(102,128,153,.02);*/
-        /*border-bottom: 2px dotted #FF80FF;*/
-        /*font-weight:bold;*/
-        font-size: 100%;
-    }
 }
 
 .item-header {
@@ -189,21 +146,16 @@ body {
 }
 
 .title-style {
-    // display:table-cell;
-    // margin-bottom:10px;
     text-align:left;
     line-height: 20px;
-    // height:19px;
     display:inline-block;
     max-width:480px;
-    font-weight:bold;
-    // set in scss variable
-    color:rgba(255, 255, 255, 1);
-    // color:rgba(0, 0, 0, 1);
-    text-shadow: 3px 2px 0px rgba(180, 180, 180, .8);
-    font-family:"Consolas", "Monaco", "Courier New", "Courier", monospace;
-    /*padding:0px 0px 0px 4px;
-    margin:0px;*/
+
+    // SAM: for later
+    // font-family:"Consolas", "Monaco", "Courier New", "Courier", monospace;
+    // font-weight:bold;
+    // color:rgba(255, 255, 255, 1);
+    // text-shadow: 2px 2px 5px #626262;
 }
 
 .date-style {
@@ -213,22 +165,6 @@ body {
     text-align:right;
     line-height: 20px;
     height:19px;
-}
-
-.rainbow-fill {
-    display:inline-block;
-    background-color: black;
-    > span {
-        font-size: 20px;
-        font-family: "Arial Black", Gadget, sans-serif;
-
-        background: -webkit-linear-gradient(left, orange , yellow, cyan, violet); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(right, orange, yellow, cyan, violet); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(right, orange, yellow, cyan, violet); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to right, orange , yellow, cyan, violet); /* Standard syntax (must be last) */
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 }
 
 .yt-item {
@@ -263,67 +199,44 @@ body {
     border-bottom: 2px ridge rgba(154, 198, 125, 1);
     background-color: #8cae68;
 }
-/*
+
+// https://stackoverflow.com/questions/4888223/align-image-in-center-and-middle-within-div
 .yt-cell-thumb {
     border-bottom: 2px ridge rgba(154, 198, 125, 1);
     background-color: #8cae68;
-    div {
-        margin: auto;
-        // background-color: #000;
+    a {
         display: flex;
+        float: left;
+        margin: auto;
         height: 180px;
         width: 240px;
-        // width: 10%;
-        float: left;
-        img {
-            margin: auto;
-            // Magic!
-            max-width: 100%;
-            max-height: 100%;
+        &:link, &:visited, &:hover, &:focus {
+            text-decoration: none;
         }
-    }
-}
-*/
-
-.yt-cell-thumb {
-    border-bottom: 2px ridge rgba(154, 198, 125, 1);
-    background-color: #8cae68;
-    div {
-        margin: auto;
-        // background-color: #000;
-        display: flex;
-        height: 180px;
-        width: 240px;
-        // width: 10%;
-        float: left;
-        img {
-            margin: auto;
-            /* Magic! */
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
-}
-
-.yt-cell-thumb2 {
-    border-bottom: 2px ridge rgba(154, 198, 125, 1);
-    background-color: #8cae68;
-    div {
-        margin: auto;
-        // background-color: #000;
-        display: flex;
-        height: 180px;
-        width: 240px;
-        // width: 10%;
-        float: left;
         div {
             margin: auto;
-            /* Magic! */
             max-width: 100%;
             max-height: 100%;
         }
     }
 }
+
+/*.yt-cell-thumb {
+    border-bottom: 2px ridge rgba(154, 198, 125, 1);
+    background-color: #8cae68;
+    div {
+        margin: auto;
+        display: flex;
+        height: 180px;
+        width: 240px;
+        float: left;
+        img {
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}*/
 
 .yt-cell-me {
     border-bottom: 2px ridge rgba(154, 198, 125, 1);
@@ -347,10 +260,6 @@ a {
 a:hover {
     text-decoration:underline;
     color: #f5a2c6;
-}
-
-img {
-    border:1px solid rgba(180, 180, 180, .2);
 }
 
 .bullet {
@@ -380,6 +289,17 @@ img {
     box-shadow: 0 0 6px #bbb;
 }
 
+.footer {
+    width: 100%;
+    color: #999;
+    font-size: 15px;
+    // font-style: italic;
+    // letter-spacing: 1px;
+    // word-spacing: 2px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    padding: 10px 0 30px;
+}
 @media all and (max-width: 720px) {
     /*
     // carried over from previous website...
